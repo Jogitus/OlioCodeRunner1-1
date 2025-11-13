@@ -1,6 +1,10 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        car olio1 = new car();
+        car olio1 = new car("Kia", "Rio", 2);
+
+        olio1.accelerate();
+        olio1.brake();
+        olio1.printData();
     }
 } // Main loppu
 class car{
@@ -8,8 +12,13 @@ class car{
     public String model;
     public int amountOfFuel;
     
+    public car(String b, String m, int aOF){
+        brand = b;
+        model = m;
+        amountOfFuel=aOF;
+    }
     public void brake(){
-        System.out.println("The car is breaking");
+        System.out.println("Car is breaking");
     }
 
     public void accelerate(){
